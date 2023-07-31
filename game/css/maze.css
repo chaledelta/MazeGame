@@ -1,0 +1,389 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: #d7adad;
+}
+
+/* ----------------------游戏开始界面------------------ */
+.startTip{
+    width: 500px;
+    height: 600px;
+    position: absolute;
+    left: 35%;
+    top: 20%;
+    background-color: #ebdbdb;
+    border: 3px solid black;
+    border-radius: 20px;
+}
+
+.startTip h2{
+    margin: 20px;
+    position: relative;
+    left: 27%;
+    color: #212121;
+}
+
+.startTip p{
+    margin: 20px;
+    font-size: 18px;
+    color: #212121;
+}
+
+
+/* ---------------------------地图界面------------------------*/
+#map{
+    width: 806px;
+    height: 806px;
+    
+    position: absolute;
+    left: 30%;
+    bottom: 40px;
+
+    background-color: #726e6e;
+
+    border: 3px solid black;
+    border-radius: 5px;
+
+    z-index: -1;
+    display: none;
+}
+
+.fogs {
+    position:absolute;
+    display: flex;
+    flex-wrap: wrap;
+    /* border: 1px solid black; */
+}
+
+.fog {
+    width: 40px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 1);
+    /* border: 1px solid black; */
+
+    z-index: 2;
+
+}
+
+.tools{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tool{
+    position: relative;
+    /* left: 20%;
+    top: 20%; */
+    width: 40px;
+    height: 40px;
+    background-color: #726e6e;
+    /* border: 1px solid black; */
+    padding: 4px;
+
+    z-index: 1;
+}
+
+
+/* -------------------------------游戏界面---------------------------- */
+.gameTip{
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    height: 800px;
+    width: 305px;
+    border: 1px solid black;
+    border-radius: 10px;
+
+    display:flex;
+    flex-direction: column;
+    
+    background-color: #ebdbdb;
+
+    color: white;
+}
+
+.samples{
+    width: 80px;
+    height: 650px;
+    display: flex;
+    flex-direction: column;
+    flex-direction: space-between;
+    align-items: center;
+
+    /* border: 1px solid black; */
+}
+
+#samplesintro{
+    width: 80px;
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: row;
+}
+
+#introduction{
+    width: 220px;
+    height: 650px;
+    /* border: 1px solid black; */
+}
+
+.intro{
+    width: 220px;
+    height: 70px;
+    padding: 3px;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 10px 0;
+
+    font-size: 16px;
+    color: black;
+}
+
+.sampleTool{
+    position: relative;
+    /* left: 20%;
+    top: 20%; */
+    width: 70px;
+    height: 70px;
+    background-color: #726e6e;
+    /* border: 1px solid black; */
+    padding: 4px;
+    margin: 5.5px;
+
+    border-radius: 10px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column-reverse;
+
+    z-index: 1;
+}
+
+#tipTitle{
+    height: 40px;
+    width: 300px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 18px;
+    color:black;
+}
+
+.tip{
+    width: 300px;
+    height: auto;
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: center;
+
+    font-size: 18px;
+    color:black;
+}
+
+
+/* ----------------------答题界面------------------------- */
+.question_card {
+    width: 500px;
+    height: 400px;
+    margin: 3px;
+    position:absolute;
+    bottom: 250px;
+    left: 40%;
+    background-color: #011522;
+    border-radius: 8px;
+    z-index: 5;
+
+    display:none;
+    
+}
+.card_tools{
+    display: flex;
+    align-items: center;
+    padding: 9px;
+}
+.circle {
+    padding: 0 4px;
+}
+.box {
+    display: inline-block;
+    align-items: center;
+    width: 10px;
+    height: 10px;
+    padding: 1px;
+    border-radius: 50%;
+}
+.red {
+    background-color: #ff605c;
+}
+.yellow {
+    background-color: #ffbd44;
+}
+.green {
+    background-color: #00ca4e;
+}
+
+
+#option{
+    position: relative;
+    top: 20%;
+    left: 10%;
+    width: 400px;
+    height:auto;
+    font-size: 18px;
+    color: beige;
+    list-style: none
+}
+
+#content{
+    margin: 10px;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    width: 400px;
+    height: auto;
+    border:2px solid rgb(55, 123, 249);
+    margin:10px 0 10px 0;
+    font-size: 20px;
+    color: beige;
+}
+
+/* ---------------------------按钮----------------------------*/
+/* 提交按钮 */
+#button_submit {
+    position: relative;
+    top: 70%;
+    left: 75%;
+    width: 100px;
+    height: 50px;
+    padding: 0.8em 1.8em;
+    border: 2px solid #17C3B2;
+    position: relative;
+    overflow: hidden;
+    background-color: transparent;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 16px;
+    transition: .3s;
+    z-index: 1;
+    font-family: inherit;
+    color: #17C3B2;
+}
+#button_submit::before {
+    content: '';
+    width: 0;
+    height: 300%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    background: #17C3B2;
+    transition: .5s ease;
+    display: block;
+    z-index: -1;
+}  
+#button_submit:hover::before {
+    width: 105%;
+}
+#button_submit:hover {
+    color: #111;
+}
+
+/* 开始游戏按钮 */
+.btnStart {
+    padding: 15px 25px;
+    border: unset;
+    border-radius: 15px;
+    color: #212121;
+    z-index: 3;
+    background: #e8e8e8;
+    position: relative;
+    top:80%;
+    left:38%;
+    font-weight: 1000;
+    font-size: 17px;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    transition: all 250ms;
+    overflow: hidden;
+}
+.btnStart::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    border-radius: 15px;
+    background-color: #212121;
+    z-index: -1;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    transition: all 250ms
+} 
+.btnStart:hover {
+    color: #e8e8e8;
+}
+.btnStart:hover::before {
+    width: 100%;
+}
+
+/* -------------------游戏结束界面------------------ */
+.gameOver{
+    width:300px;
+    height: 200px;
+    position: absolute;
+
+    top:35%;
+    left: 32%;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+
+    background-color: #ebdbdb;
+
+    border: 1px solid black;
+    border-radius: 10px;
+
+    z-index: 3;
+}
+
+#gameOver{
+    width: 250px;
+    height: auto;
+    /* border: 1px solid black; */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 24px;
+}
+
+#time{
+    width: 250px;
+    height: auto;
+    /* border: 1px solid black; */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 24px;
+}
+
+#gameOverBtn{
+    position: relative;
+    top:0px;
+    left: 0px;
+    width: 200px;
+    height: 50px;
+}

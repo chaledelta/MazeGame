@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maze</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap.css.map">
+    <link rel="stylesheet" href="css/bootstrap.min.css.map">
+    <link rel="stylesheet" href="css/maze.css">
+    
+</head>
+
+<body>
+
+    <div class="startTip">
+        <button class="btnStart">开始游戏</button>
+        <h2>黑暗迷雾森林</h2>
+        <p>
+            帮助勇者离开黑暗迷雾森林，游戏中，整体是一张迷宫地图，
+            被黑暗的迷雾覆盖，只有勇者身边有微弱的灯光，勇者需要集齐3把钥匙，
+            并且找到出口才能成功逃离黑暗迷雾森林，继续接下来的旅途。
+            
+        </p>
+        <p>
+            Tips:
+            在迷宫地图中，会有3座魔法灯塔，点亮灯塔，可以持续照亮某片区域；
+            部分散落的宝箱，可以提供帮助勇者更快完成任务的工具；
+            在迷雾森林中，记得要注意脚下和游荡在身边的怪物哦。
+        </p>
+    </div>
+
+
+    <div id="map">
+        <div class="fogs"></div>
+        <div class="tools"></div>
+
+
+        <div class="gameOver">
+            <label id="gameOver"></label>
+            <label id="time">用时1分钟</label>
+            <button id="gameOverBtn" class="btnStart">游戏结束</button>
+        </div>
+        
+        
+    </div>
+
+    <div class="gameTip">
+        <div id="tipTitle">图例介绍</div>
+        <div id="samplesintro">
+            <div class="samples">
+                
+                <div id="tower" class="sampleTool">魔法塔
+                    <span class="glyphicon glyphicon-tower" aria-hidden="true" style="color:#155b30; font-size: 30px;"></span>
+                </div>
+        
+                <div id="tree1" class="sampleTool">树木1
+                    <span class="glyphicon glyphicon-tree-conifer" aria-hidden="true" style="color:#475b3e; font-size: 30px;"></span>
+                </div>
+                
+                <div id="tree2" class="sampleTool">树木2
+                    <span class="glyphicon glyphicon-tree-deciduous" aria-hidden="true" style="color:#678a56; font-size: 30px;"></span>
+                </div>
+        
+                <!-- <div id="hero" class="tool">
+                    <span class="glyphicon glyphicon-eye-open" aria-hidden="true" style="color:#c6753f; font-size: 30px;"></span>
+                </div> -->
+        
+                <div id="export" class="sampleTool">出口
+                    <span class="glyphicon glyphicon-tent" aria-hidden="true" style="color:#1163d0; font-size: 30px;"></span>
+                </div>
+        
+                <div id="gift" class="sampleTool">奖励
+                    <span class="glyphicon glyphicon-gift" aria-hidden="true" style="color:#d05d11; font-size: 30px;"></span>
+                </div>
+        
+                <div id="trap" class="sampleTool">陷阱
+                    <span class="glyphicon glyphicon-alert" aria-hidden="true" style="color:#bb1b23; font-size: 30px;"></span>
+                </div>
+        
+                <div id="monster" class="sampleTool">怪物
+                    <span class="glyphicon glyphicon-pawn" aria-hidden="true" style="color:#6b2ea8; font-size: 30px;"></span>
+                </div>
+                
+                <div id="key" class="sampleTool">钥匙
+                    <span class="glyphicon glyphicon-paperclip" aria-hidden="true" style="color:#e8c930; font-size: 30px;"></span>
+                </div>
+                
+            </div>
+
+            <div id="introduction">
+                <div id="intro1" class="intro">按'F'键交互后持续照亮一定范围</div>
+                <div id="intro2" class="intro"></div>
+                <div id="intro3" class="intro"></div>
+                <div id="intro4" class="intro">集齐3把钥匙后交互完成游戏</div>
+                <div id="intro5" class="intro">按'F'键交互，答题成功后获得奖励，奖励形式为扩大勇者照明范围，或是显示钥匙位置</div>
+                <div id="intro6" class="intro">踩上就会触发游戏失败结束</div>
+                <div id="intro7" class="intro">碰上就会触发游戏失败结束</div>
+                <div id="intro8" class="intro">按'F'键捡起钥匙，共3把钥匙</div>
+            </div>
+
+        </div>
+
+        <label class="tip">tip</label>
+        <label id="tip" class="tip"></label>
+    </div>
+    
+    
+    <div class="question_card">
+        <div class="card_tools">
+          <div class="circle">
+            <span class="red box"></span>
+          </div>
+          <div class="circle">
+            <span class="yellow box"></span>
+          </div>
+          <div class="circle">
+            <span class="green box"></span>
+          </div>
+        </div>
+        
+
+        <button id="button_submit">
+            <span class="button_top">提交</span>
+        </button>
+
+        <div id="content">
+            1.以下哪项target属性值可被用来在新窗口中打开链接文档？
+        </div>
+
+        <div id="option">
+            <li> <input type='radio' value='A' name='option'> A. _blank </li>
+            <li> <input type='radio' value='A' name='option'> B. _self </li>
+            <li> <input type='radio' value='A' name='option'> C. _parent </li>
+            <li> <input type='radio' value='A' name='option'> D. _top </li>
+        </div>
+        
+    </div>
+
+    
+
+    
+    
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <script src="js/requestNextAnimationFrame.js"></script>
+    <script src="js/maze.js"></script>
+</body>
+</html>
+
+<!-- #d7adad -->
+<!-- #726e6e -->
+<!-- #212121 -->
